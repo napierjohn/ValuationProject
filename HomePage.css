@@ -1,0 +1,78 @@
+﻿/*  This page was started with generic initial set up.
+
+*/
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.5;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .90em;
+	margin-bottom: 1.75em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3,
+h4 {
+	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+main-nav {
+    display:block;
+    color:darkred;
+}
+main-header {
+    color:red;
+}
+.NavMenu {
+    color: orangered;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 1025px) {
+
+
+
+
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
