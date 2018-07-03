@@ -1,52 +1,62 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+<!-- John Napier - napierjohn@gmail.com
+    May 2018
+    Code Louisville FrontEnd Project
+
+-->
 <head>
-    <title>PVA Basic Query</title>
+    <title>Lou RE Tools</title>
 	  <meta charset="utf-8" />
     <link rel="stylesheet" href="normalize.css">
-	  <link rel="stylesheet" href="HomePage.css"  type="text/css">
+	  <link rel="stylesheet" href="Homepage.css"  type="text/css">
     <style type="text/css"></style>
     
 </head>
 
 <body>
     <header class="headerItem">
-        <div class="navDiv clearfix" id="navDiv" style="left: 14px; top: 50px; width: 20%">
-            <h1 class="navH1">Main Nav</h1>
+
+        <div class="banner" id="bannerImage">
+            <h1>Louisville Real Estate Toolbox  </h1>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Navigation</button>
+          <div class="dropdown-content">
+            <a href="#JeffCo">JeffCo Tools Specific</a>
+            <a href="#mAnalysis">Mortgage Analysis</a>
+            <a href="#ReResources">RE Resources</a>
+            <a href="#CodeLouProj">CodeLou Project Details</a>
+            <input type="search" name="q" placeholder="Search site" aria-label="Search through site content">
+          </div>
+        
+            </div>
+                <section class="hero">
+            <div class="hero-inner">
+           
+                <a href="https://example.com/" class="btn">Go ahead...</a>
+            </div>
+        </section> 
+        
+        <nav class="clearfix" id="navDiv"  >
+            <!--<h1> Main Nav</h1> -->
             <ul class ="navList">
-            <li><a href="#">abc</a></li>
-            <li><a href="#">def</a></li>
-            <li><a href="#">def</a></li>
-            <li><a href="#">jkl</a></li>
+            <li><a href="#JeffCo">JeffCo Tools Specific</a></li>
+            <li><a href="#mAnalysis">Mortgage Analysis</a></li>
+            <li><a href="#ReResources">RE Resources</a></li>
+            <li><a href="#CodeLouProj">CodeLou Project Details</a></li>
             <li><input type="search" name="q" placeholder="Search site" aria-label="Search through site content"></li>
 
             </ul>
-        </div>
+        </nav>
+    
+
+
     </header>
-
-        
-
-
-        <div class="banner" id="bannerImage">
-             <h1 class="introContent">Banner Test</h1>
-
-            <h1>
-            </h1>
-        </div>
-        <div class="mainContent">
-                 <section class="hero">
-                   <div class="hero-inner">
-                       <h1>Louisville Real Estate Toolbox</h1>
-                       <h2>Quick access to investor research tools.</h2>
-                       <a href="https://example.com/" class="btn">Go ahead...</a>
-                   </div>
-        </section> 
-           <h1>mainContent Heading 1</h1>
-        <p>Test</p>
-
-
-        <ul class="flex-container nowrap">
-          <li class="flex-item">JS</li>
+    <div>
+          <ul class="flex-container nowrap">
+          <li class="flex-item">JS </li>
           <li class="flex-item">While Loop</li>
           <li class="flex-item">Do While Loop</li>
           <li class="flex-item">For Loop</li>
