@@ -46,7 +46,6 @@ h5 {
 }
 
 a {
-    color: white;
     text-decoration: none;
 
 }
@@ -123,7 +122,6 @@ ul {
     left:5px;
     background-color: black;
 
-    
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -142,6 +140,10 @@ ul {
 .dropdown:hover .dropbtn {text-decoration:underline;}
     
 nav {display:none;}
+
+nav a {
+    color:white;
+}
 
 nav h1 {
     padding: 2px;
@@ -171,6 +173,7 @@ nav li{
 	display:block;
     text-align:center;
     min-width: 15em;
+    
 }
     
 
@@ -310,7 +313,45 @@ nav li{
 /* ===== Footer =======*/
 
 .main-footer {
+}/*   Tabbed Display:none to block */
+
+.tab div{
+    position:relative;
+    display:none;
+    color:black;
+    background-color:lightslategrey;
 }
+
+.tab div:target {
+    display: block;
+    color:red;
+    font:medium;
+    padding: 5px;
+    background-color:darkgoldenrod;
+}
+ section#choosetab {
+    border-bottom:6px solid gold;
+    font:larger;
+    height:5em;
+
+
+}
+#choosetab a{
+    background-color:gold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* =================================
@@ -343,14 +384,47 @@ nav li{
     header h1:after {
         content: 'REI One Source';
     }
-}
-
+      
 /* Laptop+ Media query
     -Nav Menu expands to inline  */
 @media (min-width: 769px) {
     header h1:after {
         content:'RE Investor One Resource';
    }  
+
+    .navList {
+        display:inline-block;
+        width:100%;
+        position:absolute;
+        left:0;
+        border:0;  
+        margin:0;
+    }
+    #navList {
+        width: 100%;
+        float: left;
+        margin: 0 0 0 0;
+     
+        list-style: none;
+        background-color: #f2f2f2;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+    
+    }
+    #navList li {
+        /*display:inline-block;  */
+        float: left;
+    }
+    ul.#navList.navList {
+        margin:0;
+        padding:0;
+        border:0;
+    }
+    #navDiv {
+
+    }
+}
+
 }
 
 
@@ -370,3 +444,5 @@ nav li{
 nav.clearfix {left: 3px; top: 53px;}
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
