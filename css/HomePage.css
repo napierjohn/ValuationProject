@@ -18,7 +18,7 @@ body {
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 10px;
 	cursor: default;
-	background:url(zip_map_DoM_2015.png));
+	/*background:url(../images/zip_map_DoM_2015.png);*/
 	color: #000;
 }
 
@@ -212,7 +212,7 @@ nav li{
     text-align: center;
 
     /* Background styles */
-    background-image: url("zip_map_DoM_2015.png");
+    background-image: url("../images/zip_map_DoM_2015.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
