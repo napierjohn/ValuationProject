@@ -1,16 +1,16 @@
 
 
-#CodeLou_FrontEnd Project ###May 2018
+# CodeLou_FrontEnd Project ###May 2018
 
->##Student:  John Napier	502-643-2784	napierjohn@gmail.com
+>## Student:  John Napier	502-643-2784	napierjohn@gmail.com
 
->##Project Name:  Valuation
+>## Project Name:  Valuation
 
 
-##Description
+## Description
 A brief description of your project
 
-##Custom CSS Classes
+## Custom CSS Classes
 The class(es) I created are:
 
 1. class name ex( .main-info-section )
@@ -18,7 +18,7 @@ The class(es) I created are:
 
 2.
 
-##Custom JavaScript Functions
+## Custom JavaScript Functions
 The javascript functions I created are:
 
 1. function name ex( animate() )
