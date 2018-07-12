@@ -24,7 +24,7 @@ body {
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 10px;
 	cursor: default;
-	/*background:url(../images/zip_map_DoM_2015.png);*/
+	background-color:darkkhaki;
 	color: #000;
 }
 
@@ -258,31 +258,34 @@ ul.navList {
 
 /* ===== Multi-Family Tab Set ===== */
 
-/* Style the tab */
+/* tab style */
+
+.tabTrulia h3 {
+    font-size:16px;
+    padding: 0 0 0 16px;
+}
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
+/* tab button style */
 .tab button {
     background-color: inherit;
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
+    padding: 4px 16px;
+    transition: 0.4s;
+    font-size: 16px;
 }
 
-/* Change background color of buttons on hover */
+/* button action */
 .tab button:hover {
     background-color: #ddd;
 }
-
-/* Create an active/current tablink class */
 .tab button.active {
     background-color: #ccc;
 }
@@ -290,12 +293,17 @@ ul.navList {
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 3px 12px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
 }
+.tabcontent p{
+    display:inline-block;
+    font-size:larger;
+    vertical-align:top;
+}
 
-/* Fade in tabs */
+/* tab fade effect */
 @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -304,6 +312,12 @@ ul.navList {
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+/*  image parameters */
+.tabcontent .tabimage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 /* ===== Flex Container Demo =====  */
@@ -415,6 +429,10 @@ ul.navList {
     .navList li {
         min-height:29px;
 
+    }
+    .tabcontent img {
+        height:300px;
+        width:400px;
     }
 }
 

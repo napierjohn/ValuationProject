@@ -10,6 +10,16 @@
 */ 
 
 /*      -- Header CSS --*/
+body {
+    position:relative;
+	line-height: 1.1;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	cursor: default;
+	background-color:darkkhaki;
+	color: #000;
+    box-sizing: border-box;
+}
 .banner {
     
     padding-right: 0;
@@ -19,6 +29,7 @@
 ul.navbar-nav {
     border-bottom: 4px solid darkred;
     white-space:nowrap;
+    font-size:small;
 }
 
 
@@ -32,6 +43,9 @@ li.nav-item:hover {
     text-decoration:underline;
 }
 
+.dropdown .magnifyicon {
+    display:inline-block;
+}
 h2 {font-size:1rem;} /*1rem = 16px*/
 
 
@@ -54,6 +68,22 @@ h2 {font-size:1rem;} /*1rem = 16px*/
  
 
 }
+
+
+/* ===== Multi-Family Tab Set ===== */
+
+.img-responsive {
+    display:block;
+    max-width:60%;
+    height:auto;
+
+}
+.tab-content p {
+    display: inline-block;
+        font-size:larger;
+    vertical-align:top;
+}
+
 
 
 

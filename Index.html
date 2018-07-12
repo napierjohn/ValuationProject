@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/normalize.css">
 	  <link rel="stylesheet" href="css/Homepage.css"  type="text/css">
     <style type="text/css"></style>
-    
+    <script src="js/HomePage.js"></script>
 </head>
 
 <body>
@@ -65,28 +65,31 @@
     </header>
    
      <!-- Need to add content to tabbed links and change name of choosetab -->
-    <div> 
-        <h3>Zillow Search Results</h3>
+    <div class="tabTrulia"> 
+        <h3>Trulia Search Results</h3>
 
         <div class="tab">
-              <button class="tablinks" onclick="openCity(event, 'London')">Multi-Family A</button>
-              <button class="tablinks" onclick="openCity(event, 'Paris')">Multi-Family B</button>
-              <button class="tablinks" onclick="openCity(event, 'Tokyo')">Multi-Family C</button>
+              <button class="tablinks" onclick="openProperty(event, 'Multi-Family-A')">Multi-Family A</button>
+              <button class="tablinks" onclick="openProperty(event, 'Multi-Family-B')">Multi-Family B</button>
+              <button class="tablinks" onclick="openProperty(event, 'Multi-Family-C')">Multi-Family C</button>
         </div>
 
-        <div id="London" class="tabcontent">
-              <h3>London</h3>
-              <p>London is the capital city of England.</p>
+        <div id="Multi-Family-A" class="tabcontent">
+              <h3><a href="https://www.trulia.com/p/ky/louisville/3217-fordhaven-rd-louisville-ky-40214--2042789440">3217 Fordhaven Rd</a></h3>
+                <img src="https://thumbs.trulia-cdn.com/pictures/thumbs_5/zillowstatic/ISq1elr6766sc50000000000.jpg"  alt="sold if not shown" class="tabimage">
+              <p>Louisville, KY 40214 <br />3,520 sqft Multi-Family</p>
         </div>
 
-        <div id="Paris" class="tabcontent">
-              <h3>Paris</h3>
-              <p>Paris is the capital of France.</p> 
+        <div id="Multi-Family-B" class="tabcontent">
+              <h3><a href="https://www.trulia.com/p/ky/louisville/3707-briarbridge-ln-louisville-ky-40218--2042831008">3707 Briarbridge Ln</a></h3>
+                <img src="https://thumbs.trulia-cdn.com/pictures/thumbs_5/zillowstatic/ISqp4idyaon0831000000000.jpg"  alt="sold if not shown" class="tabimage">
+              <p>Louisville, KY 40218 <br />3,000 sqft Multi-Family</p>
         </div>
 
-        <div id="Tokyo" class="tabcontent">
-              <h3>Tokyo</h3>
-              <p>Tokyo is the capital of Japan.</p>
+        <div id="Multi-Family-C" class="tabcontent">
+              <h3><a href="https://www.trulia.com/p/ky/louisville/110-n-clifton-ave-louisville-ky-40206--2096755722">110 N Clifton Ave</a></h3>
+                <img src="https://thumbs.trulia-cdn.com/pictures/thumbs_5/zillowstatic/ISmex12n6pgc8r1000000000.jpg"  alt="sold if not shown" class="tabimage">
+              <p>Louisville, KY 40206 <br />2,911 sqft Multi-Family</p>
         </div>
      </div>
     <!--  flexbox demo-->
