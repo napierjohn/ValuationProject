@@ -1,6 +1,12 @@
 ﻿/*  John Napier - napierjohn@gmail.com
     May 2018
     Code Louisville FrontEnd Project
+    
+    Project: Valuation
+    
+    Custom CSS to support Index.html
+
+    Written by hand without helper tools /framework.  Some snippets used after modification.
 
 */
 
@@ -30,7 +36,7 @@ h1 {
 
 }
 h2 {
-    font-size:2em;
+ 
 }
 
 
@@ -48,6 +54,9 @@ h5 {
 a {
     text-decoration: none;
 
+}
+a:link {
+    color:white;
 }
 
 a:link, a:active, a:visited {
@@ -78,31 +87,17 @@ header h1:after {
 }
 
 /* =================================
-  Base Layout Styles
+  Navigation
 ==================================== */
 
-/* ---- Navigation ----
-
-nav{
-    position: absolute;
-    top: 1px;
-    left: 4px;
-    z-index: 80;
-    width:20%;
-    line-height: 12px;
-
-}  
-
-ul {
-    display:none;
-}
-*/
+/* dropdown for small screen navigation*/
 .dropdown {
     position:absolute;
     /*display: block;*/
     left: 5px;
     top: 35px;
    /* visibility: initial;*/
+
 }
  .dropbtn {
     background-color: black;
@@ -127,55 +122,52 @@ ul {
     z-index: 1;
 }
 
-.dropdown-content a {
-    color: white;
-    padding: 10px 8px;
-    text-decoration: none;
-    display: block;
-    border-bottom:2px solid darkred;
-}
+    .dropdown-content a {
+        color: white;
+        padding: 10px 8px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 2px solid darkred;
+    }
 
 .dropdown-content a:hover {background-color: #333333;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {text-decoration:underline;}
-    
-nav {display:none;}
 
-nav a {
-    color:white;
+/*  larger screen navigation  */
+.nav{
+    display:none;
+    position: absolute;
+    top: 40px;
+    z-index: 80;
+    width:100%;
+    line-height: 12px;
+
+}  
+
+ul.navList {
+
+    width:100%;
+    list-style:none;
 }
 
-nav h1 {
-    padding: 2px;
-    margin: 2px;
-    text-align:left;
-
-}
-
-.navList {
-    position:absolute;
-    left: 5px; 
-    top: 35px; 
-    -webkit-padding-start: 10px;
-    width:20%;
-
-  
-}
-
-nav li{
+.navList li{
+    position:relative;
+    right:25px;
 	background-color: black;
 	border-bottom:3px solid darkred;
-    padding: 6px 3px 2px;
-	margin: 2px 0 4px;
-    position:relative;
-    /*text-decoration:none;   -not needed*/
+    color:white;
+    padding:1px;
+	margin: 2px 0px 0px;
     text-transform: uppercase;
-	display:block;
     text-align:center;
-    min-width: 15em;
-    
+    min-width:15em;
+    max-width:20em;
+    width:20%;
 }
-    
+.searchbox {
+ }
+
 
 /*
 
@@ -205,8 +197,8 @@ nav li{
 
     /* Flexbox stuff */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;
+    align-items: center;*/
 
     /* Text styles */
     text-align: center;
@@ -226,20 +218,26 @@ nav li{
     margin-top: 0;
     margin-bottom: 0.5em;
 }
+.resizingDiv {
 
+    width:50%;
+}
 .hero-inner {
-    position:absolute;
+    position:relative;
 
-    top:42px;
+ 
 
 }
 .hero .btn {
-    /* Positioning and sizing */
-    visibility:visible;
+    /*button stays just right of center and a % below banner   */
+   
+     /* Positioning and sizing */
+     position:relative;
+     visibility:visible;
     display:inline;
-    width:150px;
-    background-color:blue;
-
+    top:5%; 
+    width:auto;
+    background-color:black;
 
     /* Padding and margins */
     padding: 4px;
@@ -248,17 +246,65 @@ nav li{
     margin-right: auto;
 
     /* Text styles */
-    color:black;
+    color:white;
+    font-size:12px;
     text-decoration:none;
-    font-style:oblique;
-    font-size:16px;
-
 
     /* Border styles */
     border: 3px solid black;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
+
+/* ===== Multi-Family Tab Set ===== */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 /* ===== Flex Container Demo =====  */
 .flex-container {
@@ -266,7 +312,6 @@ nav li{
   margin: 0;
   list-style: none;
   border: 1px solid silver;
-  -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -340,20 +385,6 @@ nav li{
     background-color:gold;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =================================
   Media Queries
 ==================================== */
@@ -361,11 +392,14 @@ nav li{
 /* Tablet+ Media query
     -Nav Menu expands to block
     -'Nav Menu' text disapears
-    - 
-*/
+    - icon appears
+                                */
 @media (min-width: 376px) {
     .dropdown {
         display: none;
+    }
+    .banner {
+
     }
     .banner h1 {
         font-size:medium;
@@ -373,62 +407,79 @@ nav li{
     header h1:after {
         content: "⚜️";
     }
-    nav {
-        display: block;
+   
+    .nav {
+        display:block;
+    } 
+    
+    .navList li {
+        min-height:29px;
+
     }
 }
 
-/* Bigger Tablet+ Media query*/
+/* Bigger Tablet+ Media query
+    - banner change
+                            */
 @media (min-width: 440px) {
+    .banner h1 {
+        font-size: large;
+    }
 
     header h1:after {
         content: 'REI One Source';
     }
-      
-/* Laptop+ Media query
-    -Nav Menu expands to inline  */
-@media (min-width: 769px) {
-    header h1:after {
-        content:'RE Investor One Resource';
-   }  
+}
 
-    .navList {
-        display:inline-block;
-        width:100%;
-        position:absolute;
-        left:0;
-        border:0;  
+/* Laptop+ Media query
+    -Nav Menu adjusts 
+    - banner change
+                            */
+@media (min-width: 769px) {
+
+    .banner h1 {
+        font-size:x-large;
+        padding:0;
+    }
+    .banner h1:after {
+        content:'Real Estate Investor One Resource';
+        font-size:large;
+   }
+
+    .nav {
+        top:58px;
+    }
+    .navList li{
+        font-size:small;
+        padding: 6px ;
+        min-height:39px;
+    }
+    .hero .btn {
+        font-size:small;
+    }
+}
+
+/* PC+ Media query
+    -Nav Menu expands to inline 
+ 
+                            */
+@media (min-width: 1200px) {
+
+
+    .navList li{
+        display:table-cell;
+        vertical-align:top;
         margin:0;
+        right:0;
+
     }
-    #navList {
-        width: 100%;
-        float: left;
-        margin: 0 0 0 0;
-     
-        list-style: none;
-        background-color: #f2f2f2;
-        border-bottom: 1px solid #ccc;
-        border-top: 1px solid #ccc;
-    
-    }
-    #navList li {
-        /*display:inline-block;  */
-        float: left;
-    }
-    ul.#navList.navList {
+    ul.navList {
+        display:table;
         margin:0;
         padding:0;
-        border:0;
-    }
-    #navDiv {
 
     }
 }
-
-}
-
-
-
 
 
 /* ---- Float clearfix ---- */

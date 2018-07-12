@@ -1,6 +1,6 @@
 
 
-# CodeLou_FrontEnd Project ###May 2018
+# CodeLou_FrontEnd Project ### May 2018
 
 >## Student:  John Napier	502-643-2784	napierjohn@gmail.com
 

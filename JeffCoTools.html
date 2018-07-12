@@ -4,127 +4,97 @@
     May 2018
     Code Louisville FrontEnd Project
 
+    Jefferson Country Real Estate Research Tools
+
     Used Bootstrap to create this page.
 -->
 <head>
     <title>JeffCo Tools</title>
 	  <meta charset="utf-8" />
-    <link rel="stylesheet" href="normalize.css">
-	  <link rel="stylesheet" href="JeffCoTools.css"  type="text/css">
-    <style type="text/css"></style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  </head>
+     <!-- Font-Awesome CDN -->   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!--   JeffCoTools CSS -->
-    <link rel="stylesheet" href="css/JeffCoTools.css" type="text/css">
+    <link href="css/JeffCoTools.css" rel="stylesheet"  type="text/css">
 </head>
 
 <body>
-    <header class="headerItem">
-        <!-- top banner w :afters in @media-->
-        <div class="banner" id="bannerImage">
-            <h1>Louisville Real Estate Toolbox  </h1>
-        </div>
+    <header>
+        <!-- top banner via Bootstrap -->
 
-        <!-- Below Tablet Size Navigation - CSS created Dropdown-->
-        <div class="dropdown">
-          <button class="dropbtn">Navigation</button>
-          <div class="dropdown-content">
-            <a href="#JeffCo">JeffCo Tools Specific</a>
-            <a href="#mAnalysis">Mortgage Analysis</a>
-            <a href="#ReResources">RE Resources</a>
-            <a href="#CodeLouProj">CodeLou Project Details</a>
-            <input type="search" name="q" placeholder="Search site" aria-label="Search through site content">
-          </div>
+                <div class="d-inline banner m-auto bg-primary">
+                    <h2 class=" m-0 p-2 bg-primary text-black text-font-weight-bold">Louisville Real Estate Toolbox    <span class="d-md-none d-inline">⚜️</span>
+                        <span class="d-none d-md-inline d-lg-none bg-primary text-white h3">  REI One Source</span>
+                            <span class="d-none d-lg-inline bg-primary text-white h3">  Real Estate Investor One Resource </span></h2>
+                </div>
+
         
-            </div>
-                <section class="hero">
-            <div class="hero-inner">
-           
-                <a href="https://example.com/" class="btn">Go ahead...</a>
-            </div>
-        </section> 
-        <!-- Tablet+ size Navigation-->
-        <nav class="clearfix" id="navDiv" >
-            <!--<h1> Main Nav</h1> -->
-            <ul class ="navList" id="navList">
-            <li><a href="#JeffCo">JeffCo Tools Specific</a></li>
-            <li><a href="#mAnalysis">Mortgage Analysis</a></li>
-            <li><a href="#ReResources">RE Resources</a></li>
-            <li><a href="#CodeLouProj">CodeLou Project Details</a></li>
-            <li><input type="search" name="q" placeholder="Search site" aria-label="Search through site content"></li>
-
+        <!-- Navigation via Bootstrap -->  
+        <nav class="navbar navbar-expand-md bg-dark p-0-4 text-white font-weight-bold">
+          <a class="navbar-brand p-0 text-nowrap text-center text-white font-weight-bold" >Jefferson Co.<br />Tools</a>
+          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-search text-white"></i></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html"> Home </a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#"> Mortgage <br />Analysis <span class="sr-only">(current)</span></a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#"> RE Resources </a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#"> CodeLou <br />Project Details </a>
+              </li>
             </ul>
+            <!-- search icon (font-awesome- on navbar  -->
+                <div class="dropdown magnifyicon">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  </div>
+                </div>
+  
+            <!-- search box on navbar  -->
+            <form class="form-inline searchbox my-2 my-lg-0 bg-dark">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-sucess text-dark border rounded my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
         </nav>
-    
-
+  
 
     </header>
-    <!-- Need to add content to tabbed links and change name of choosetab
-        -->>
-    <div class="tab">
-        <section id="choosetab">
-        <a href="#link1">Link 1</a>   
-        <a href="#link2">Link 2</a>
-        <a href="#link3">Link 3</a>
-        </section>
-        <div id="link1">
-          <h3>Content to Link 1</h3>
-          <p>Hello World!</p>
-        </div>
-
-        <div id="link2">
-          <h3>Content to Link 2</h3>
-          <h4>Great success!</h4>
-        </div>
-
-        <div id="link3">
-          <h3>Content to Link 3</h3>
-          <p>Yeah!</p>
-        </div>
-    </div>
-
-
-    <div>
-          <ul class="flex-container nowrap">
-          <li class="flex-item">JS </li>
-          <li class="flex-item">While Loop</li>
-          <li class="flex-item">Do While Loop</li>
-          <li class="flex-item">For Loop</li>
-          <li class="flex-item">use :target to make things display:</li>
-          <li class="flex-item">6</li>
-          <li class="flex-item">7</li>
-          <li class="flex-item">8</li>
-        </ul>
-
-        <ul class="flex-container wrap">
-          <li class="flex-item">1</li>
-          <li class="flex-item">2</li>
-          <li class="flex-item">3</li>
-          <li class="flex-item">4</li>
-          <li class="flex-item">5</li>
-          <li class="flex-item">6</li>
-          <li class="flex-item">7</li>
-          <li class="flex-item">8</li>
-        </ul>
-
-        <ul class="flex-container wrap-reverse">
-          <li class="flex-item">1</li>
-          <li class="flex-item">2</li>
-          <li class="flex-item">3</li>
-          <li class="flex-item">4</li>
-          <li class="flex-item">5</li>
-          <li class="flex-item">6</li>
-          <li class="flex-item">7</li>
-          <li class="flex-item">8</li>
-        </ul>
+    <!--  Hero via Bootstrap -->
+    <section class="bgimage">
+        <div class="container-fluid">
+        <div class="row">
+  
+        <h5>Hello, world! Full width Hero-unit header</h5>
 
         </div>
+        </div>
+    </section>
+    
+    <div class="test">TEST</div>
 
     <footer>
 
     </footer>
+    <!--  Bootstrap JQuery linkset -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>
