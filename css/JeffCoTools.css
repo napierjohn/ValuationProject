@@ -28,8 +28,8 @@ body {
 
 ul.navbar-nav {
     border-bottom: 4px solid darkred;
-    white-space:nowrap;
-    font-size:small;
+    white-space: nowrap;
+    font-size: small;
 }
 
 
@@ -65,9 +65,8 @@ h2 {font-size:1rem;} /*1rem = 16px*/
   color:white;
   text-shadow:2px 2px #333;
 
- 
-
 }
+
 
 
 /* ===== Multi-Family Tab Set ===== */
