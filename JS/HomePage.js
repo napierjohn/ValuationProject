@@ -1,4 +1,5 @@
 ﻿
+//Trulia Tabs - snippet from online//
 
 function openProperty(evt, propName) {
     var i, tabcontent, tablinks;

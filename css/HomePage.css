@@ -165,7 +165,8 @@ ul.navList {
     max-width:20em;
     width:20%;
 }
-.searchbox {
+li.searchbox {
+    padding:10px;
  }
 
 
@@ -259,15 +260,22 @@ ul.navList {
 /* ===== Multi-Family Tab Set ===== */
 
 /* tab style */
+.tabTrulia{
+
+
+}
 
 .tabTrulia h3 {
     font-size:16px;
     padding: 0 0 0 16px;
 }
 .tab {
+
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    width:fit-content;
+    border-radius:5px;
 }
 
 /* tab button style */
@@ -294,8 +302,8 @@ ul.navList {
 .tabcontent {
     display: none;
     padding: 3px 12px;
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s;
+    -webkit-animation: fadeEffect 1.5s;
+    animation: fadeEffect 1.5s;
 }
 .tabcontent p{
     display:inline-block;
@@ -318,19 +326,16 @@ ul.navList {
     width: 100%;
     max-width: 500px;
     height: auto;
+    border:3px solid #ccc;
 }
 
 /* ===== Flex Container Demo =====  */
 .flex-container {
+  position:relative;
   padding: 0;
   margin: 0;
   list-style: none;
   border: 1px solid silver;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
   display: flex;
 }
 
@@ -368,6 +373,46 @@ ul.navList {
   font-size: 2em;
   text-align: center;
 }
+
+/* Create three unequal columns that floats next to 
+    each other conatined in .row        */
+
+
+.row {
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 4px;
+
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 15%;
+}
+
+.right {
+    width: 10%;
+    float:right;
+}
+
+.middle {
+    width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
 
 /* ===== Footer =======*/
 
