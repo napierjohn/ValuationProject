@@ -17,7 +17,7 @@ body {
 	font-size: 10px;
 	cursor: default;
 	background-color:darkkhaki;
-	color: #000;
+
     box-sizing: border-box;
 }
 .banner {
@@ -49,6 +49,7 @@ li.nav-item:hover {
 h2 {font-size:1rem;} /*1rem = 16px*/
 
 
+
 /* ===== Hero Background Image- Bootstrap ===== */
 
 
@@ -60,11 +61,47 @@ h2 {font-size:1rem;} /*1rem = 16px*/
   background-position: center;
   background-size:cover;
   background-attachment: fixed;
+
 }
-.bgimage h5 {
+.bgimage h5, .bgimage h4 {
   color:white;
   text-shadow:2px 2px #333;
 
+}
+
+.bgimage div.col-6{ 
+    background-color:rgba(	189,	183,	107, .8);
+
+}
+
+/* =======================
+     mainContent using Grid method for layout
+    ====================== */
+
+.mainContent{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 80px auto; 
+    grid-template-areas: "intro intro intro" "leftMain centerMain rightMain";
+    grid-gap: 8px 10px;
+    outline:2px solid red;
+    padding:10px;
+
+}
+
+.intro {
+    grid-area:intro;
+    background-color:yellow;
+}
+
+.leftMain {
+    grid-area:leftMain;
+}
+.centerMain {
+    grid-area:centerMain;
+}
+.rightMain {
+    grid-area:rightMain;
 }
 
 

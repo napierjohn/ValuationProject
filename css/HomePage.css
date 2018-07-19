@@ -25,7 +25,7 @@ body {
 	font-size: 10px;
 	cursor: default;
 	background-color:darkkhaki;
-	color: #000;
+
 }
 
 p {
@@ -45,10 +45,11 @@ h3 {
 }
 
 h4 {
-
+    color:white;
 }
 
 h5 {
+    color:white;
 }
 
 a {
@@ -122,7 +123,7 @@ header h1:after {
     z-index: 1;
 }
 
-    .dropdown-content a {
+.dropdown-content a {
         color: white;
         padding: 10px 8px;
         text-decoration: none;
@@ -134,7 +135,7 @@ header h1:after {
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {text-decoration:underline;}
 
-/*  larger screen navigation  */
+/*  larger screen navigation bar */
 .nav{
     display:none;
     position: absolute;
@@ -152,7 +153,8 @@ ul.navList {
 }
 
 .navList li{
-    position:relative;
+    display:grid;
+
     right:25px;
 	background-color: black;
 	border-bottom:3px solid darkred;
@@ -165,31 +167,17 @@ ul.navList {
     max-width:20em;
     width:20%;
 }
-li.searchbox {
-    padding:10px;
+.nav .searchbox {
+    padding:8px;
+    	background-color: black;
+	border-bottom:3px solid darkred;
+
  }
 
 
-/*
-
-
-*/
-
-/*  ===== Photo Slide show: =====
-		.picture-wrapper .text-slide:nth-of-type(5) {
-		    animation: autoplay2 20s infinite -1s;
-		}
-
-		.text-slide {
-    position: absolute;
-    left: -100%;
-    top: 0;
-    width: 100%;
-    height: 100%;
-		}
-*/
-
-/* ===== Hero Background Image ===== */
+/* =======================
+     Hero Background Image 
+    ===================== */
 .hero {
     /* Sizing */
 
@@ -232,11 +220,11 @@ li.searchbox {
 .hero .btn {
     /*button stays just right of center and a % below banner   */
    
-     /* Positioning and sizing */
-     position:relative;
-     visibility:visible;
+   /* Positioning and sizing */
+    position:relative;
+    visibility:visible;
     display:inline;
-    top:5%; 
+    top:10%; 
     width:auto;
     background-color:black;
 
@@ -257,7 +245,10 @@ li.searchbox {
 }
 
 
-/* ===== Multi-Family Tab Set ===== */
+
+/* =======================
+     Multi-Family Tab Set 
+    ====================== */
 
 /* tab style */
 .tabTrulia{
@@ -329,52 +320,12 @@ li.searchbox {
     border:3px solid #ccc;
 }
 
-/* ===== Flex Container Demo =====  */
-.flex-container {
-  position:relative;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: 1px solid silver;
-  display: flex;
-}
 
-.nowrap  {
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
 
-.wrap    {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-.wrap li {
-  background: gold;
-}
-
-.wrap-reverse         {
-  -webkit-flex-wrap: wrap-reverse;
-  flex-wrap: wrap-reverse;
-}
-.wrap-reverse li {
-  background: deepskyblue;
-}
-
-.flex-item {
-  background: tomato;
-  padding: 5px;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
-}
-
-/* Create three unequal columns that floats next to 
+/* 
+    1st attempt at a structured layout/  this one uses row and column classes.  Old method.
+   
+     Create three unequal columns that floats next to 
     each other conatined in .row        */
 
 
@@ -387,22 +338,27 @@ li.searchbox {
 
 .column {
     float: left;
+ 
 }
 
 .left {
     width: 15%;
+    outline:1px solid blue;
+
+}
+
+.intro {
+    width: 100%;
+    float:right;
+    outline:1px solid blue; 
 }
 
 .right {
-    width: 10%;
-    float:right;
+    width: auto;
+    outline:1px solid green;
 }
 
-.middle {
-    width: 75%;
-}
-
-/* Clear floats after the columns */
+/* Clear floats after the columns   */
 .row:after {
     content: "";
     display: table;
@@ -414,7 +370,9 @@ li.searchbox {
 
 
 
-/* ===== Footer =======*/
+/* =====================
+     Footer 
+    ====================*/
 
 .main-footer {
 }/*   Tabbed Display:none to block */
@@ -453,13 +411,13 @@ li.searchbox {
     -'Nav Menu' text disapears
     - icon appears
                                 */
-@media (min-width: 376px) {
+@media (min-width: 376px),
+        (max-width:700) and (orientation:landscape){
     .dropdown {
         display: none;
     }
     .banner {
-
-    }
+   }
     .banner h1 {
         font-size:medium;
     }
@@ -484,7 +442,7 @@ li.searchbox {
 /* Bigger Tablet+ Media query
     - banner change
                             */
-@media (min-width: 440px) {
+@media only screen and (min-width: 440px)  {
     .banner h1 {
         font-size: large;
     }
@@ -526,9 +484,11 @@ li.searchbox {
     -Nav Menu expands to inline 
  
                             */
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
 
+    .navList{
 
+    }
     .navList li{
         display:table-cell;
         vertical-align:top;
@@ -540,7 +500,7 @@ li.searchbox {
         display:table;
         margin:0;
         padding:0;
-
+        align-content:spa
     }
 }
 
