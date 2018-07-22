@@ -25,11 +25,14 @@ body {
 	font-size: 10px;
 	cursor: default;
 	background-color:darkkhaki;
+    /*display:flex;
+    flex-direction:column;*/    
+    height:100vh;
 
 }
 
 p {
-	font-size: .90em;
+	font-size: 1.2em;
 	margin-bottom: 1em;
 }
 h1 {
@@ -67,7 +70,6 @@ a:link, a:active, a:visited {
 a:hover {text-decoration:underline; cursor: pointer; }
 
 .banner {
- 
     width:100vw;
     padding: 1px 2px 1px 8px;
     object-fit:cover;
@@ -86,7 +88,6 @@ header h1:after {
     font-size:smaller;
     content:"⚜️";
 }
-
 /* =================================
   Navigation
 ==================================== */
@@ -98,7 +99,6 @@ header h1:after {
     left: 5px;
     top: 35px;
    /* visibility: initial;*/
-
 }
  .dropbtn {
     background-color: black;
@@ -109,7 +109,6 @@ header h1:after {
     padding: 8px 3px 2px;
 	margin: 2px 0 0px;
     /*position:absolute;*/
-
 }
 
 .dropdown-content {
@@ -117,7 +116,6 @@ header h1:after {
     position: absolute;
     left:5px;
     background-color: black;
-
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -129,7 +127,8 @@ header h1:after {
         text-decoration: none;
         display: block;
         border-bottom: 2px solid darkred;
-    }
+
+}
 
 .dropdown-content a:hover {background-color: #333333;}
 .dropdown:hover .dropdown-content {display: block;}
@@ -169,9 +168,8 @@ ul.navList {
 }
 .nav .searchbox {
     padding:8px;
-    	background-color: black;
+    background-color: black;
 	border-bottom:3px solid darkred;
-
  }
 
 
@@ -180,14 +178,13 @@ ul.navList {
     ===================== */
 .hero {
     /* Sizing */
-
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
 
     /* Flexbox stuff */
     display: flex;
-    /*justify-content: center;
-    align-items: center;*/
+    justify-content: center;
+    align-items: center;
 
     /* Text styles */
     text-align: center;
@@ -218,19 +215,13 @@ ul.navList {
 
 }
 .hero .btn {
-    /*button stays just right of center and a % below banner   */
+    /*button stays just right of center  */
    
-   /* Positioning and sizing */
-    position:relative;
-    visibility:visible;
-    display:inline;
-    top:10%; 
-    width:auto;
-    background-color:black;
+   /* Positioning and sizing  */
 
     /* Padding and margins */
     padding: 4px;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
 
@@ -242,9 +233,171 @@ ul.navList {
     /* Border styles */
     border: 3px solid black;
     border-radius: 5px;
+    background-color:black;
+}
+/* 1st version of structured mainContent layout/  this one uses row and column classes.  Old method.
+   
+     Create three unequal columns that floats next to 
+    each other conatined in .row        
+.row {
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 15%;
+    outline:1px solid blue;
+}
+
+.intro {
+    width: 100%;
+    float:right;
+    outline:1px solid blue; 
+}
+
+.right {
+    width: auto;
+    outline:1px solid green;
+}
+
+/* Clear floats after the columns   
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}    */
+
+/* 2nd version of structured mainContent layout
+    This one uses flexbox techniques.         */
+
+.mainContent{
+    display:flex;
+    flex-direction:column;
+    margin:25px;
+}
+
+.row{
+    display:flex;
+    flex-flow:row wrap;
+
+}
+.row > * {
+      flex: 1 100%;
+}
+.column {
+    margin:10px;
+}
+.right, .intro, .left{
+    padding:5px 5px;
+}
+.column.intro, .column.left{
+    display:flex;
+    flex-flow:row wrap;
+    border-bottom: 1px solid khaki;
+}
+
+.column.left{
+    text-justify:auto;
+}
+
+img#REworkerSVG{
+    fill:#94d31b;
+    align-self:flex-start;
+    position:relative;
+    width:50px; 
+    height:50px;
+    border:2px solid black;
+    margin:5px;
+}
+.intro h1{
+    display:flex;
+    width:100%;
+    justify-content:space-between;
 }
 
 
+/*=================================
+    Popup for right column button
+    -borrowed and adjusted to apply to this page.
+  =================================*/
+
+/* Popup container */
+.popup {
+    visibility:visible;
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius:4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height:64px;
+   
+}
+
+/*  SVG button for pop-up*/
+span.calcImgButton {
+    background: url(../images/calculating-device.svg) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    display:block;
+    position:center;
+    height: 54px;
+    width: 40px;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle to hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Fade in the popup */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
 
 /* =======================
      Multi-Family Tab Set 
@@ -252,8 +405,6 @@ ul.navList {
 
 /* tab style */
 .tabTrulia{
-
-
 }
 
 .tabTrulia h3 {
@@ -265,7 +416,19 @@ ul.navList {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width:fit-content;
+    width: -webkit-fit-content;
+    height: -webkit-fit-content;
+    width: -moz-fit-content;
+    height: -moz-fit-content;
+    border-radius:5px;
+    border: 2px solid black;
+    padding:8px;
+    margin: 0 0 0 16px;
+
+}
+button .tablinks{
+    align-content:space-between;
+    border:1px solid black;
     border-radius:5px;
 }
 
@@ -322,49 +485,6 @@ ul.navList {
 
 
 
-/* 
-    1st attempt at a structured layout/  this one uses row and column classes.  Old method.
-   
-     Create three unequal columns that floats next to 
-    each other conatined in .row        */
-
-
-.row {
-    padding: 10px;
-    background: #f1f1f1;
-    border-radius: 4px;
-
-}
-
-.column {
-    float: left;
- 
-}
-
-.left {
-    width: 15%;
-    outline:1px solid blue;
-
-}
-
-.intro {
-    width: 100%;
-    float:right;
-    outline:1px solid blue; 
-}
-
-.right {
-    width: auto;
-    outline:1px solid green;
-}
-
-/* Clear floats after the columns   */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 
 
 
@@ -374,33 +494,12 @@ ul.navList {
      Footer 
     ====================*/
 
-.main-footer {
-}/*   Tabbed Display:none to block */
 
-.tab div{
-    position:relative;
-    display:none;
-    color:black;
-    background-color:lightslategrey;
+footer{
+    margin:10px 10px 10px 26px;
+    padding-left:16px;
 }
 
-.tab div:target {
-    display: block;
-    color:red;
-    font:medium;
-    padding: 5px;
-    background-color:darkgoldenrod;
-}
- section#choosetab {
-    border-bottom:6px solid gold;
-    font:larger;
-    height:5em;
-
-
-}
-#choosetab a{
-    background-color:gold;
-}
 
 /* =================================
   Media Queries
@@ -437,10 +536,15 @@ ul.navList {
         height:300px;
         width:400px;
     }
+
+    .left, .right {
+        flex: 1 175px
+    }
 }
 
 /* Bigger Tablet+ Media query
     - banner change
+    - right and left columns re-align
                             */
 @media only screen and (min-width: 440px)  {
     .banner h1 {
@@ -450,11 +554,20 @@ ul.navList {
     header h1:after {
         content: 'REI One Source';
     }
-}
+    .intro p {
+	    font-size: 1.5em;
+    }
 
+    
+    .column.left{
+    border-right:1px solid khaki;
+    border-bottom:none; 
+    }
+}
 /* Laptop+ Media query
-    -Nav Menu adjusts 
-    - banner change
+    - Nav Menu adjusts 
+    - Banner change
+    - maincontent columns re-align
                             */
 @media (min-width: 769px) {
 
@@ -478,6 +591,15 @@ ul.navList {
     .hero .btn {
         font-size:small;
     }
+    .row {flex:2 auto}
+    .left { flex:.5;  order: 1; }
+    .intro { flex:3;  order: 2; }
+    .right{ flex:1;  order: 3; }
+
+    .column.intro {
+        border-bottom: none;
+        border-right: 1px solid khaki;
+    }
 }
 
 /* PC+ Media query
@@ -500,7 +622,7 @@ ul.navList {
         display:table;
         margin:0;
         padding:0;
-        align-content:spa
+        align-content:space-between;
     }
 }
 

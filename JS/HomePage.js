@@ -1,5 +1,5 @@
 ﻿
-//Trulia Tabs - snippet from online//
+//Trulia Tabs - snippet from online
 
 function openProperty(evt, propName) {
     var i, tabcontent, tablinks;
@@ -13,4 +13,10 @@ function openProperty(evt, propName) {
     }
     document.getElementById(propName).style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+// Click on Calc svg, open the popup
+function clickPopup() {
+    var popup = document.getElementById("calcPopup");
+    popup.classList.toggle("show");
 }

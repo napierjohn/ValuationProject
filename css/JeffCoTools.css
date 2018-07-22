@@ -96,12 +96,15 @@ h2 {font-size:1rem;} /*1rem = 16px*/
 
 .leftMain {
     grid-area:leftMain;
+        background-color:yellow;
 }
 .centerMain {
     grid-area:centerMain;
+        background-color:yellow;
 }
 .rightMain {
     grid-area:rightMain;
+        background-color:yellow;
 }
 
 
