@@ -55,7 +55,7 @@ h2 {font-size:1rem;} /*1rem = 16px*/
 
 .bgimage {
   width:100%;
-  height:500px;
+  height:300px;
   background: url('../images/zip_map_DoM_2015.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -73,42 +73,56 @@ h2 {font-size:1rem;} /*1rem = 16px*/
     background-color:rgba(	189,	183,	107, .8);
 
 }
-
+/*    Not in Use.  Using Bootstrap grid system instead. */
 /* =======================
-     mainContent using Grid method for layout
-    ====================== */
+     ContainerMain using Grid method for layout
+    ====================== 
 
-.mainContent{
+
+.containerMain{
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 80px auto; 
-    grid-template-areas: "intro intro intro" "leftMain centerMain rightMain";
+    grid-template-rows: 80px auto 40px; 
+    grid-template-areas: "intro intro intro" "left center right" "footer footer footer";
     grid-gap: 8px 10px;
     outline:2px solid red;
     padding:10px;
+    grid-gap:2px;
 
 }
 
-.intro {
+.introMain {
     grid-area:intro;
+    justify-items:center;
+    background-color:yellow;
+
+}
+.leftMain {
+    grid-area:left;
+    justify-items:center;
     background-color:yellow;
 }
-
-.leftMain {
-    grid-area:leftMain;
-        background-color:yellow;
-}
 .centerMain {
-    grid-area:centerMain;
-        background-color:yellow;
+    grid-area:center;
+    justify-items:center;
+    background-color:yellow;
 }
 .rightMain {
-    grid-area:rightMain;
-        background-color:yellow;
+    grid-area:right;
+    justify-items:center;
+    background-color:yellow;
 }
+.footerMain {
+    grid-area:footer;
+    justify-items:center;
+    background-color:yellow;
+}
+*/
 
 
-/**/
+/*     Bootstrap grid componants*/
+
+
 
 
 /* ===== Multi-Family Tab Set ===== */
