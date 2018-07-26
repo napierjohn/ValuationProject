@@ -10,15 +10,15 @@
 
 ## Description
 
-This website is on its way to become a personal tool of mine to do research on real estate property. Though now it is more of a resource document, the end goal is to create more complex financial analyis tools and the ability to scrape Louisville's Commishioner's Sales site and pull deeds from Jeff Co Reg. of Deeds.  
+This website is on its way to become a personal tool of mine to do research on real estate property. Though not yet.  The end goal is to create more complex financial analyis tools and the ability to scrape Louisville's Commishioner's Sales site and pull deeds from Jeff Co Reg. of Deeds.  
 
 ## Project Build
 
-This site was also built to test my HTML,CSS, and JS skills gained from Code Louisville and Treehouse.  I first built the home page by hand then built the JeffCoTools.html + .css using the Bootstrap framework.
+This site was also built to test my HTML, CSS, and JS skills gained from Code Louisville and Treehouse.  I first built the home page (index.html) by hand then built the JeffCoTools.html + .css using the Bootstrap framework and CSS modifications.  Click around and find the other interactivity. 
 
 The homepage code was either typed in or pasted snippets adjusted to work for my page.  I wanted to determine everything myself, make it responsive, and expereince all the obstacles one might find when making their first webpage.  Infact, I wanted that experience because this would be my only first webpage.  This page uses Normalize.css.
 
-The JeffCoTools page and associated files were made with Bootstrap.  My **goal** was to **mimic** the homepage in all styles and each componant (tabs, responsive actions, hero background, navigation sequence, etc) of the top and bottom of the page - not the center content.  this page reles on Bootstrap for the Normaize.css features.
+The JeffCoTools page and associated files were made with Bootstrap.  My **goal** was to **mimic** the homepage in all styles and each componant (tabs, responsive actions, hero background, navigation sequence, etc) using Bootstrap and some adjustments (like the serachbox in the main navbar).  This page relies on Bootstrap for the Normaize.css features.  I started the page using a grid system for the main content but switched to Bootstrap's row/column ability.
 
 ## Custom CSS Classes
 
@@ -62,8 +62,11 @@ The javascript functions I created are:
 1. Index.html and Hopempage.css
 
 ```javascript
-    /*
-    */
+   // Click on Calc svg, open the popup
+function clickPopup() {
+    var popup = document.getElementById("calcPopup");
+    popup.classList.toggle("show");
+}
 ```
 
 2. JeffCoTools.html and css
@@ -73,5 +76,4 @@ The javascript functions I created are:
     */
 ```
 
-function name ex( animate() )
-    .. what function does ex( animate() is used to move the elements in the info div across the screen)
+
